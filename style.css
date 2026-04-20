@@ -1,70 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
 }
 
-.main-header {
-  background-color: rgba(0, 0, 0, 0.3);
-  padding-bottom: 10px;
+body {
+  background: #f6f7f9;
+  color: #20242a;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
 }
 
-.title {
+.site-header {
+  background: #20242a;
+  color: white;
+  padding: 48px 20px;
   text-align: center;
+}
+
+.eyebrow {
+  color: #9fd7c1;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.site-header h1 {
+  font-size: 44px;
+  line-height: 1.1;
   margin: 0;
-  font-size: 8em;
-  font-family: "Helvetica";
-  font-weight: normal;
-  color: white;
 }
 
-#card-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
+.subtitle {
+  color: #e5e7eb;
+  font-size: 18px;
+  margin: 14px auto 0;
+  max-width: 620px;
 }
 
-.card {
-  width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 5px;
+main {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 28px 20px 44px;
 }
 
-.card-content {
-  padding: 20px;
-  font-family: "Verdana";
-  color: #777;
+.controls {
+  align-items: end;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 16px;
 }
 
-.card-content h2 {
-  margin-top: 0;
-  font-size: 20px;
+.controls label {
+  color: #3c434d;
+  display: grid;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 6px;
 }
 
-.card img {
+select {
+  background: white;
+  border: 1px solid #ccd2da;
+  border-radius: 6px;
+  color: #20242a;
+  font: inherit;
+  min-height: 42px;
+  padding: 8px 10px;
   width: 100%;
-  height: auto;
 }
 
-.footer {
+.result-count {
+  color: #5b6470;
+  font-size: 15px;
+  margin: 0 0 18px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.study-card {
+  background: white;
+  border: 1px solid #dde2e8;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(32, 36, 42, 0.08);
   display: flex;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
 }
 
-button {
-  text-align: center;
-  background-color: #666;
-  border: none;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 40px;
-  border-radius: 10px;
+.template-card {
+  display: none;
+}
+
+.card-header {
+  display: grid;
+  gap: 6px;
+}
+
+.card-title {
+  color: #20242a;
+  font-size: 20px;
+  line-height: 1.25;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.card-meta {
+  color: #68717d;
+  font-size: 14px;
+  margin: 0;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topic-badge,
+.evidence-badge {
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 9px;
+}
+
+.topic-badge {
+  background: #e7f4ef;
+  color: #146047;
+}
+
+.evidence-high {
+  background: #dff3e5;
+  color: #1f6b37;
+}
+
+.evidence-moderate {
+  background: #e4eefb;
+  color: #285f9f;
+}
+
+.evidence-emerging {
+  background: #f7e8c4;
+  color: #775311;
+}
+
+.study-type,
+.population {
+  color: #3c434d;
+  margin: 0;
+}
+
+.study-section {
+  border-top: 1px solid #edf0f3;
+  padding-top: 12px;
+}
+
+.study-section h3 {
+  color: #20242a;
+  font-size: 15px;
+  margin: 0 0 4px;
+}
+
+.study-section p {
+  color: #3c434d;
+  margin: 0;
+}
+
+.source-link {
+  align-self: start;
+  background: #20242a;
+  border-radius: 6px;
   color: white;
-  font-size: 22px;
-  cursor: pointer;
-  margin: 5px;
+  font-weight: 700;
+  margin-top: auto;
+  padding: 9px 12px;
+  text-decoration: none;
+}
+
+.source-link:hover {
+  background: #146047;
+}
+
+.empty-state {
+  background: white;
+  border: 1px dashed #aeb7c2;
+  border-radius: 8px;
+  color: #4b5563;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.site-footer {
+  border-top: 1px solid #dde2e8;
+  color: #5b6470;
+  font-size: 14px;
+  padding: 22px 20px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 36px 16px;
+  }
+
+  .site-header h1 {
+    font-size: 34px;
+  }
+
+  main {
+    padding: 22px 16px 36px;
+  }
+
+  .controls,
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }

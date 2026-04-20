@@ -1,31 +1,110 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hypertrophy Evidence Catalog</title>
+    <meta
+      name="description"
+      content="A research-backed catalog of hypertrophy training studies."
+    />
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
+
+    <!--
+      Add your JavaScript implementation in scripts.js, then uncomment this line:
+      <script src="scripts.js" defer></script>
+    -->
   </head>
 
   <body>
-    <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
+    <header class="site-header">
+      <p class="eyebrow">Science-Based Lifting</p>
+      <h1>Hypertrophy Evidence Catalog</h1>
+      <p class="subtitle">Research-backed training variables for muscle growth.</p>
     </header>
-    <div id="card-container"></div>
-    <div class="card" style="display: none">
-      <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer">
-      <button onclick="quoteAlert()">Get A Quote!</button>
-      <button onclick="removeLastCard()">Remove A Card!</button>
-    </div>
+
+    <main>
+      <section class="controls" aria-label="Catalog filters">
+        <label>
+          Topic
+          <select id="topic-filter">
+            <option value="all">All Topics</option>
+            <option value="Volume">Volume</option>
+            <option value="Frequency">Frequency</option>
+            <option value="Intensity / Load">Intensity / Load</option>
+            <option value="Proximity to Failure">Proximity to Failure</option>
+            <option value="Rest Periods">Rest Periods</option>
+            <option value="Exercise Selection">Exercise Selection</option>
+            <option value="Range of Motion">Range of Motion</option>
+            <option value="Progressive Overload">Progressive Overload</option>
+            <option value="Trained vs. Untrained Lifters">
+              Trained vs. Untrained Lifters
+            </option>
+            <option value="Meta-Analysis / Review">Meta-Analysis / Review</option>
+          </select>
+        </label>
+
+        <label>
+          Evidence
+          <select id="evidence-filter">
+            <option value="all">All Evidence</option>
+            <option value="High">High</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Emerging">Emerging</option>
+          </select>
+        </label>
+
+        <label>
+          Sort
+          <select id="year-sort">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+          </select>
+        </label>
+      </section>
+
+      <p id="result-count" class="result-count">Showing 0 of 0 studies</p>
+
+      <section id="card-container" class="card-grid" aria-live="polite"></section>
+
+      <p id="empty-state" class="empty-state">
+        Add your study data and JavaScript in <strong>scripts.js</strong> to display
+        the catalog.
+      </p>
+
+      <article class="study-card template-card" aria-hidden="true">
+        <div class="card-header">
+          <h2 class="card-title">Study title</h2>
+          <p class="card-meta">Authors - Year</p>
+        </div>
+
+        <div class="badges">
+          <span class="topic-badge">Topic</span>
+          <span class="evidence-badge evidence-high">Evidence</span>
+        </div>
+
+        <p class="study-type"><strong>Type:</strong> Study type</p>
+        <p class="population"><strong>Population:</strong> Population studied</p>
+
+        <div class="study-section">
+          <h3>Key Finding</h3>
+          <p class="key-finding">Short summary of the main result.</p>
+        </div>
+
+        <div class="study-section">
+          <h3>Practical Takeaway</h3>
+          <p class="practical-takeaway">Short note for lifters and coaches.</p>
+        </div>
+
+        <a class="source-link" href="#" target="_blank" rel="noopener">
+          View Source
+        </a>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      Links open original study sources. This catalog is for learning, not medical
+      advice.
+    </footer>
   </body>
 </html>
