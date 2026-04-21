@@ -41,6 +41,10 @@ const resultCount = document.getElementById("result-count");
 const emptyState = document.getElementById("empty-state");
 // hidden template card to copy each time
 const templateCard = document.querySelector(".template-card");
+// search input for title/author text
+const searchInput = document.getElementById("search-input");
+// area where topic counts will be shown
+const topicCounts = document.getElementById("topic-counts");
 
 function showCards() {
   // clear 
@@ -57,8 +61,11 @@ function showCards() {
     const matchesTopic = topicFilter.value === "all" || study.topic === topicFilter.value;
     const matchesEvidence = evidenceFilter.value === "all" || study.evidence === evidenceFilter.value;
 
+    // searching matching studies lowercase title/authors
+    const searchText = searchInput.value.trim().toLowerCase();
+    const matchesSearch = searchText === "" || study.title.toLowerCase().includes(searchText) || study.authors.toLowerCase().includes(searchText);
     // only keep studies that pass both filters
-    if (matchesTopic && matchesEvidence) {
+    if (matchesTopic && matchesEvidence && matchesSearch) {
        matchingStudies.push(study);
     }
   }
@@ -86,7 +93,8 @@ function showCards() {
 
   // update the text above the cards
   resultCount.textContent = "Showing " + matchingStudies.length + " of " + studies.length + " studies";
-
+  // render the topic counts
+  renderTopicCounts(matchingStudies);
   // if nothing matched, show the empty message
   if (matchingStudies.length === 0) {
     emptyState.style.display = "block";
@@ -140,6 +148,44 @@ function editCardContent(card, study) {
     evidenceBadge.classList.add("evidence-emerging")
   }
 }
+// helper for rendering the topic counts
+function renderTopicCounts(filteredStudies) {
+  // clear old count items
+  topicCounts.innerHTML = "";
+
+  // make an object to store counts by topic
+  const countsByTopic = {};
+
+  // count how many filtered studies belong to each topic
+  for (let i = 0; i < filteredStudies.length; i++) {
+    const topicName = filteredStudies[i].topic;
+
+    // if this topic is not in the object yet, start it at 0
+    if (countsByTopic[topicName] === undefined) {
+      countsByTopic[topicName] = 0;
+    }
+
+    // add 1 for this study
+    countsByTopic[topicName] = countsByTopic[topicName] + 1;
+  }
+
+  // get the topic names so we can loop through them
+  const topicNames = Object.keys(countsByTopic);
+
+  // optional: sort alphabetically
+  topicNames.sort();
+
+  // make one small label for each topic count
+  for (let i = 0; i < topicNames.length; i++) {
+    const topicName = topicNames[i];
+    const countItem = document.createElement("p");
+
+    countItem.className = "topic-count-item";
+    countItem.textContent = topicName + ": " + countsByTopic[topicName];
+
+    topicCounts.appendChild(countItem);
+  }
+}
 
 // loading the studies.json into studies
 // then cal the showCards() once
@@ -163,4 +209,5 @@ function loadStudies() {
 topicFilter.addEventListener("change", showCards);
 evidenceFilter.addEventListener("change", showCards);
 yearSort.addEventListener("change", showCards);
+searchInput.addEventListener("input", showCards);
 loadStudies();

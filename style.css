@@ -77,10 +77,39 @@ select {
   width: 100%;
 }
 
+input[type="search"] {
+  background: white;
+  border: 1px solid #ccd2da;
+  border-radius: 6px;
+  color: #20242a;
+  font: inherit;
+  min-height: 42px;
+  padding: 8px 10px;
+  width: 100%;
+}
+
 .result-count {
   color: #5b6470;
   font-size: 15px;
   margin: 0 0 18px;
+}
+
+.topic-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.topic-count-item {
+  background: white;
+  border: 1px solid #dde2e8;
+  border-radius: 6px;
+  color: #3c434d;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  padding: 8px 10px;
 }
 
 .card-grid {

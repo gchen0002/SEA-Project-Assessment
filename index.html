@@ -57,9 +57,20 @@
             <option value="oldest">Oldest First</option>
           </select>
         </label>
+
+        <label>
+          Search
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search by title or author"
+          />
+        </label>
       </section>
 
       <p id="result-count" class="result-count">Showing 0 of 0 studies</p>
+
+      <section id="topic-counts" class="topic-counts" aria-live="polite"></section>
 
       <section id="card-container" class="card-grid" aria-live="polite"></section>
 
