@@ -128,7 +128,7 @@ function editCardContent(card, study) {
   cardMeta.textContent = study.authors + " - " + study.year;
   topicBadge.textContent = study.topic;
   evidenceBadge.textContent = study.evidence;
-  studyType.textContent = "Type: " + study.type;
+  studyType.textContent = "Study design: " + study.type;
   population.textContent = "Population: " + study.population;
   keyFinding.textContent = study.keyFinding;
   practicalTakeaway.textContent = study.takeaway;

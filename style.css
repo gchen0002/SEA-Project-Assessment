@@ -172,6 +172,10 @@ input[type="search"] {
   color: #146047;
 }
 
+.evidence-badge {
+  order: -1;
+}
+
 .evidence-high {
   background: #dff3e5;
   color: #1f6b37;
@@ -191,6 +195,11 @@ input[type="search"] {
 .population {
   color: #3c434d;
   margin: 0;
+}
+
+.study-type {
+  color: #6b7280;
+  font-size: 14px;
 }
 
 .study-section {
