@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Effects of Resistance Training Frequency on Measures of Muscle Hypertrophy: A Systematic Review and Meta-Analysis",
+    "authors": "Brad J Schoenfeld et al.",
+    "year": 2016,
+    "topic": "Frequency",
+    "evidence": "High",
+    "type": "Systematic review and meta-analysis",
+    "population": "Healthy adults in experimental resistance training studies",
+    "keyFinding": "When weekly training volume is equated, training a muscle group about twice per week appears to produce better hypertrophy than once per week.",
+    "takeaway": "If muscle growth is the goal, hitting a muscle more than once per week is usually a strong default.",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/27102172/",
+    "pmid": "27102172"
+  },
+  {
+    "title": "Strength and Hypertrophy Adaptations Between Low- vs. High-Load Resistance Training: A Systematic Review and Meta-analysis",
+    "authors": "Brad J Schoenfeld et al.",
+    "year": 2017,
+    "topic": "Intensity / Load",
+    "evidence": "High",
+    "type": "Systematic review and meta-analysis",
+    "population": "Adults in resistance training studies comparing low and high loads",
+    "keyFinding": "Muscle hypertrophy was similar between low-load and high-load training protocols when sets were performed to momentary muscular failure, while heavy loads improved 1RM strength more.",
+    "takeaway": "You do not need heavy loads for hypertrophy every time, but heavier work still matters if maximal strength is also a goal.",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/28834797/",
+    "pmid": "28834797"
+  },
+  {
+    "title": "Influence of Resistance Training Proximity-to-Failure on Skeletal Muscle Hypertrophy: A Systematic Review with Meta-analysis",
+    "authors": "Martin Refalo et al.",
+    "year": 2022,
+    "topic": "Proximity to Failure",
+    "evidence": "Moderate",
+    "type": "Systematic review and meta-analysis",
+    "population": "Healthy adults of varying ages and resistance training experience",
+    "keyFinding": "The review found no strong evidence that training to momentary muscular failure is superior to non-failure training for hypertrophy.",
+    "takeaway": "Sets probably need to be hard, but every set does not need to end in absolute failure to support muscle growth.",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/36334240/",
+    "pmid": "36334240"
+  },
+  {
+    "title": "Effects of range of motion on muscle development during resistance training interventions: A systematic review",
+    "authors": "Brad J Schoenfeld and Jozo Grgic",
+    "year": 2020,
+    "topic": "Range of Motion",
+    "evidence": "Moderate",
+    "type": "Systematic review",
+    "population": "Adults in longitudinal resistance training studies",
+    "keyFinding": "Full range of motion appeared to benefit lower-body hypertrophy compared with partial range of motion, while upper-body findings were more mixed.",
+    "takeaway": "Using a full range of motion is a practical default, especially for lower-body exercises.",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/32030125/",
+    "pmid": "32030125"
+  },
+  {
+    "title": "Resistance Training Volume Enhances Muscle Hypertrophy but Not Strength in Trained Men",
+    "authors": "Brad J Schoenfeld et al.",
+    "year": 2019,
+    "topic": "Volume",
+    "evidence": "Moderate",
+    "type": "Randomized controlled trial",
+    "population": "Healthy resistance-trained men",
+    "keyFinding": "Men performing higher training volumes increased muscle hypertrophy more than lower-volume groups, while strength gains were not clearly greater.",
+    "takeaway": "Doing more hard sets can help hypertrophy in trained lifters, but adding volume has a clearer effect on size than on strength.",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/30153194/",
+    "pmid": "30153194"
+  },
+  {
+    "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+    "authors": "Brad S Currier et al.",
+    "year": 2023,
+    "topic": "Meta-Analysis / Review",
+    "evidence": "High",
+    "type": "Systematic review and Bayesian network meta-analysis",
+    "population": "Healthy adults across randomized resistance training trials",
+    "keyFinding": "All resistance training prescriptions outperformed non-exercise controls for hypertrophy, and higher-load multiset twice-weekly training ranked highest for hypertrophy.",
+    "takeaway": "Hypertrophy can be built with many reasonable programs, but multiset training is a strong common denominator.",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/37414459/",
+    "pmid": "37414459"
+  },
+  {
+    "title": "Effect of free-weight vs. machine-based strength training on maximal strength, hypertrophy and jump performance - a systematic review and meta-analysis",
+    "authors": "Jonas Dybing et al.",
+    "year": 2023,
+    "topic": "Exercise Selection",
+    "evidence": "Moderate",
+    "type": "Systematic review and meta-analysis",
+    "population": "Adults aged 18 to 60 in studies comparing free weights and machines",
+    "keyFinding": "No clear difference was found between free-weight and machine-based training for hypertrophy in direct comparisons.",
+    "takeaway": "Exercise selection can be based on goals, comfort, and access because both free weights and machines can support muscle growth.",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/37582807/",
+    "pmid": "37582807"
+  }
+]
