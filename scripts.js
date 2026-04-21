@@ -159,4 +159,8 @@ function loadStudies() {
     });
 }
 
+// event listeners for the three dropdowns
+topicFilter.addEventListener("change", showCards);
+evidenceFilter.addEventListener("change", showCards);
+yearSort.addEventListener("change", showCards);
 loadStudies();
