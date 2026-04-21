@@ -73,8 +73,10 @@ function showCards() {
   // sorting the filtered studies with sort rule based on newest or not
   matchingStudies.sort(function (a, b) {
     if (yearSort.value === "newest") {
+      // returns positibe number so b before a
       return b.year - a.year;
     } else {
+      // returns negative number so a before b
       return a.year - b.year;
     }
   })
@@ -172,7 +174,7 @@ function renderTopicCounts(filteredStudies) {
   // get the topic names so we can loop through them
   const topicNames = Object.keys(countsByTopic);
 
-  // optional: sort alphabetically
+  // sort alphabetically
   topicNames.sort();
 
   // make one small label for each topic count
