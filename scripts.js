@@ -61,9 +61,10 @@ function showCards() {
     const matchesTopic = topicFilter.value === "all" || study.topic === topicFilter.value;
     const matchesEvidence = evidenceFilter.value === "all" || study.evidence === evidenceFilter.value;
 
-    // searching matching studies lowercase title/authors
+    // searching matching studies lowercase title/authors/pmid
     const searchText = searchInput.value.trim().toLowerCase();
-    const matchesSearch = searchText === "" || study.title.toLowerCase().includes(searchText) || study.authors.toLowerCase().includes(searchText);
+    const studyPmid = String(study.pmid || "").toLowerCase();
+    const matchesSearch = searchText === "" || study.title.toLowerCase().includes(searchText) || study.authors.toLowerCase().includes(searchText) || studyPmid.includes(searchText);
     // only keep studies that pass both filters
     if (matchesTopic && matchesEvidence && matchesSearch) {
        matchingStudies.push(study);
